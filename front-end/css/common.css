@@ -1,0 +1,186 @@
+/* 清除默认样式 */
+body,h1,h2,h3,h4,h5,h6,p,ol,ul,dl,dt,dd,input,textarea{
+    padding:0;
+    margin:0;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight:normal;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    vertical-align:top;
+    border:none;
+}
+div,input,textarea{
+    border:none;
+    outline:none;
+    background:none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+textarea{
+    resize:none;
+}
+i{
+  font-style: normal;
+}
+/* 以下是字体和css公共设置 */
+html {
+  font-family: "Microsoft YaHei","PingFangSC-Medium", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", Arial, sans-serif;
+}
+body{
+  box-sizing: border-box;
+  width: 100%;
+  height:100%;
+  font-size: 14px;
+}
+
+.blog-title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    width:100%;
+    text-indent: 10px;
+    margin-bottom: 20px;
+}
+
+.blog{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+} 
+
+.blog-row label{
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+.blog-row {
+    margin-bottom: 5px;
+}
+.blog-row input{
+    height: 30px;
+    width: 400px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+.blog-row textarea {
+    height: 400px;
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+.blog-row button{
+    border: none;
+    width: 120px;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    background-color: aqua;
+    border-radius: 5px;
+    margin-left: 250px;
+    margin-top: 10px;
+    color: #fff;
+}
+.blog-row button:hover{
+    cursor: pointer;
+    color: aqua;
+    border: 1px solid #33ccff;
+    background-color: #fff;
+    padding-left: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+.blogList{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 600px;
+}
+.blogList li {    
+    border: 1px dashed #ccc; 
+    cursor: pointer;
+}
+.blogList li:hover{
+    background-color: #ccc;
+}
+.blogList li div:nth-child(1){
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    color: rgb(41, 37, 37);
+}
+.blogList li div:nth-child(2){
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: rgb(73, 71, 71);
+    text-align: right;
+    padding-right: 20px
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blogList-title{
+    margin-top: 40px
+}
+.blog-nav{
+    background-color: #333;
+    color:#fff;
+    min-height: 600px;
+}
+.blog-nav li{
+    height: 35px;
+    min-width: 150px;
+    line-height: 35px;
+    border-bottom: 1px solid #fff;
+    padding-left: 20px;
+}
+.blog-nav li a{
+    color: #ccc;
+}
+.blog-list-main{
+    width: 600px;
+    margin: 0 auto
+}
+.blogDetail{
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+}
+.blogDetail .blogDetail-title{
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 100;
+    color: #333
+}
+.blogDetail .blogDetail-author{
+    text-align: center;
+    font-size: 12px;
+    color: rgb(146, 141, 141);
+}
