@@ -22,7 +22,7 @@ class Details extends React.Component{
             <div className='blogDetail'>
                 <div className='blogDetail-title'>{this.state.blogData.title}</div>
                 <div className='blogDetail-author'>作者: {this.state.blogData.name}</div>
-                <div className='blogDetail-content'>{this.state.blogData.content}</div>
+                <div className='blogDetail-content' dangerouslySetInnerHTML={{ __html: this.state.blogData.content }}/>>
             </div>
         )
     }

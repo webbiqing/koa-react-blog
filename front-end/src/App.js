@@ -19,10 +19,10 @@ class App extends Component{
                 style={{ lineHeight: '64px' }}
             >
                 <Menu.Item key="1">
-                    <Link to="/addblog">添加博客</Link>
+                    <Link to="/list">博客首页</Link>
                 </Menu.Item>
                 <Menu.Item key="2">
-                    <Link to="/list">博客列表</Link>
+                    <Link to="/addblog">博客管理</Link>
                 </Menu.Item>
                 <Menu.Item key="3">
                     nav 3
@@ -40,7 +40,7 @@ class App extends Component{
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center',borderTop: '1px solid #ccc' }}>
-                博客管理系统设计与实现
+                博客管理系统
             </Footer>
         </Layout>
       )
