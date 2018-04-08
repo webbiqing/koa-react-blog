@@ -10,7 +10,7 @@ const CONF = {
         user: 'root',
         database: 'firstKoa',
         password: 'biqing123',
-        char: 'utf-8'
+        char: 'utf8mb4'
     }
 }
 
