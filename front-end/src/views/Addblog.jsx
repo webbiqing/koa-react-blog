@@ -40,7 +40,7 @@ class Addblog extends React.Component{
     render(){
         return (
             <div className="blog">
-                <div className="blog-title">博客管理系统录入</div>
+                <div className="blog-title">博文录入</div>
                 <div className="blog-row">
                     <label>请输入博客标题：</label>
                     <input type="text" onChange={this.getTitle.bind(this)}/>
@@ -50,7 +50,7 @@ class Addblog extends React.Component{
                     <input type="text" onChange={this.getName.bind(this)}/>
                 </div>
                 <div className="blog-row">
-                    <label>请输入博客内容：</label>
+                    <label className='blog-content-label'>请输入博客内容：</label>
                     <Editor
                         localization={{ locale: 'zh' }}
                         toolbarClassName="editorToolbar"

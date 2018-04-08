@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 const { Header, Content, Footer } = Layout;
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
 
 import './styles/common.less';
 
@@ -10,7 +12,7 @@ class App extends Component{
     render() {
       return (
         <Layout>
-            <Header style={{ position: 'fixed', width: '100%' }}>
+            <Header style={{ position: 'fixed', width: '100%', zIndex:'999',padding:'0 170px' }}>
             <div className="logo" />
             <Menu
                 theme="dark"
@@ -21,15 +23,18 @@ class App extends Component{
                 <Menu.Item key="1">
                     <Link to="/list">博客首页</Link>
                 </Menu.Item>
-                <Menu.Item key="2">
-                    <Link to="/addblog">博客管理</Link>
-                </Menu.Item>
+                <SubMenu title={<span>博客管理</span>}>
+                    <Menu.Item key="setting:1">我的博客</Menu.Item>
+                    <Menu.Item key="setting:2">博客修改</Menu.Item>
+                    <Menu.Item key="setting:3">博客删除</Menu.Item>
+                    <Menu.Item key="setting:4"><Link to="/addblog">博客新增</Link></Menu.Item>
+                </SubMenu>
                 <Menu.Item key="3">
-                    nav 3
+                    我的个人信息
                 </Menu.Item>
             </Menu>
             </Header>
-            <Content style={{ padding: '0 50px', marginTop: 64 }}>
+            <Content style={{ padding: '0 175px', marginTop: 64 }}>
                 <Breadcrumb style={{ margin: '16px 0' }}>
                     <Breadcrumb.Item>Home</Breadcrumb.Item>
                     <Breadcrumb.Item>List</Breadcrumb.Item>
