@@ -7,6 +7,8 @@ import {
     Switch
   } from 'react-router-dom';
 
+import './styles/common.less';
+
 import Addblog from './views/Addblog'
 import List from './views/List'
 import Details from './views/Details'

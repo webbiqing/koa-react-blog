@@ -11,6 +11,6 @@ cd 到 back-end </br>
 返回到根目录 cd 到 front-end </br>
 执行npm i 包下载完成再执行 npm run dev  </br>
 默认的端口号是 8001  </br>
-访问地址为 http://localhost:8001  </br>
+访问地址为 http://localhost:8081  </br>
 
 

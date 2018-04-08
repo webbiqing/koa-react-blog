@@ -6,7 +6,7 @@ class Addblog extends React.Component{
     constructor(props) {
         super(props)
 		this.state ={
-            mainData:[],
+            mainData:[]
 		}
     }
     getTitle(e){
