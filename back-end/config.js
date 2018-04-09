@@ -1,7 +1,7 @@
 const CONF = {
     //服务端口配置
     server:{
-        port:6767
+        port:9091
     },
     //mysql配置
     mysql:{

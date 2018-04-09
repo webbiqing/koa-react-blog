@@ -5,6 +5,7 @@ import { Editor } from 'react-draft-wysiwyg';
 import { EditorState, convertToRaw } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { message } from 'antd';
 
 class Addblog extends React.Component{
     constructor(props) {
@@ -33,7 +34,8 @@ class Addblog extends React.Component{
         }
         postData('/weapp/add-blog',params).then(res =>{
             if(res.status == 200){
-                alert('添加成功！')
+                message.success('添加成功！');
+                this.props.history.push('/list');
             }
         })
     }

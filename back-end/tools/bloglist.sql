@@ -9,7 +9,7 @@ Source Database       : firstkoa
 Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
-
+s
 Date: 2018-04-04 15:17:26
 */
 
@@ -18,8 +18,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 -- Table structure for `bloglist`
 -- ----------------------------
-DROP TABLE IF EXISTS `bloglist`;
-CREATE TABLE `bloglist` (
+CREATE TABLE IF NOT EXISTS `bloglist` (
   `name` varchar(200) DEFAULT NULL COMMENT '博客列表',
   `id` bigint(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) DEFAULT NULL,
