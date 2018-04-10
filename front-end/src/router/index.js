@@ -13,13 +13,19 @@ const history = createBrowserHistory();
 
 const router = (
     <Router history={history}>
-        <App>
-            <Route path="/login" component={Login} />     
-            <Route path="/home" component={Home} />
-            <Route path="/addblog" component={Addblog} />
-            <Route path="/list" component={List} />
-            <Route path="/details/:blogId" component={Details} />
-        </App>
+        <div className='baseContainer'>
+            <Switch>
+                <Route path="/login" component={Login} />                                           
+                <App>
+                    <Route path="/" exact component={Home} /> 
+                    <Route path="/addblog" component={Addblog} />
+                    <Route path="/list" component={List} />
+                    <Route path="/details/:blogId" component={Details} />
+                </App>
+                <Redirect to="/" />                
+            </Switch>
+        </div>
+       
     </Router>
 );
 

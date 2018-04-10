@@ -21,7 +21,7 @@ class Login extends React.Component{
         getData('/weapp/login',params).then(
             res =>{
                 if(res.data.data === 606){
-                    this.props.history.push('/home')
+                    this.props.history.push('/')
                 }else if(res.data.data === 909){
                     message.error('用户名或者密码错误');
                 }

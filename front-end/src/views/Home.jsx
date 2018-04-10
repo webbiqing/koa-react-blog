@@ -36,7 +36,6 @@ class Home extends React.Component{
                         )
                     })
                 }
-                    
                </div>
                <div className="home-right"></div>
            </div>

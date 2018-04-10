@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const _BASE_URL = "http://localhost:9091"
+const _BASE_URL = "http://localhost:9094"
 
 export function getData(url, params) {
     let _url = _BASE_URL + url

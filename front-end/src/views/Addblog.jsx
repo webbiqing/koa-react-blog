@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import {getData,postData} from "../http/index"
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState, convertToRaw } from 'draft-js';
-import draftToHtml from 'draftjs-to-html';
+import draftToMarkdown from 'draftjs-to-markdown';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { message } from 'antd';
 
@@ -30,7 +30,7 @@ class Addblog extends React.Component{
         let params = {
             title:this.state.blogTitle,
             name:this.state.blogName,
-            content:draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
+            content:draftToMarkdown(convertToRaw(this.state.editorState.getCurrentContent()))
         }
         postData('/weapp/add-blog',params).then(res =>{
             if(res.status == 200){
