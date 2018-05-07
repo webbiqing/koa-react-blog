@@ -51,6 +51,7 @@ class App extends Component{
                 <div style={{ padding: 10, minHeight: 380 }}> 
                     {this.props.children}
                 </div>
+                
             </Content>
         </Layout>
       )

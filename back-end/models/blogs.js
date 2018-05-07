@@ -10,6 +10,9 @@ const blogs  = {
     },
     async searchMainBlog(id){
         return await sqlClient.query(escape`select * from bloglist where id = ${id}`)
+    },
+    async deleteBlog(id){
+        return await sqlClient.query(escape`Delete from bloglist where id = ${id}`)
     }
 }
 
