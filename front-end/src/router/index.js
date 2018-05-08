@@ -25,7 +25,6 @@ const router = (
                 <Redirect to="/" />                
             </Switch>
         </div>
-       
     </Router>
 );
 
