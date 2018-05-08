@@ -19,7 +19,7 @@ class Home extends React.Component{
         return (
            <div className='home'>
                <div className="home-left">
-               {/*{
+               {
                     this.state.blogList.map(item =>{
                         return(
                             <div className='home-list' key={item.id}>
@@ -35,7 +35,7 @@ class Home extends React.Component{
                             </div>
                         )
                     })
-                }*/}
+                }
 
                </div>
                <div className="home-right">
@@ -49,7 +49,7 @@ class Home extends React.Component{
                       <a href="">Github</a>
                     </div>
                     <div className="right-icon">
-                      <i className="icon3"></i>
+                      <i className="icon3">E</i>
                       <a href="">E-mail</a>
                     </div>
                   </div>
@@ -63,6 +63,9 @@ class Home extends React.Component{
                       <a href="">Medium</a>
                     </div>
                   </div>
+               </div>
+               <div className="home-fixed">
+
                </div>
            </div>
         )
