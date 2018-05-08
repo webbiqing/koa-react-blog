@@ -36,7 +36,7 @@ class Login extends React.Component{
                     <div className="login-container">
                         <div className="login-acconut">
                             <div className="login-input">
-                                <input type="text" placeholder="手机号或邮箱"
+                                <input type="text" placeholder="请输入用户名"
                                     onChange={(e)=>{this.setState({username:e.target.value})}}
                                     onKeyDown={this.handleEnterKey}
                                  />
