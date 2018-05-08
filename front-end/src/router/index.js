@@ -9,6 +9,7 @@ import Details from '../views/Details'
 import Home from '../views/Home'
 import Login from '../views/login'
 import Information from '../views/Information'
+import Message from '../views/Message'
 
 const history = createBrowserHistory();
 
@@ -23,6 +24,7 @@ const router = (
                     <Route path="/list" component={List} />
                     <Route path="/details/:blogId" component={Details} />
                     <Route path="/information" exact component={Information} />
+                    <Route path="/message" exact component={Message} />
                 </App>
                 <Redirect to="/" />                
             </Switch>
