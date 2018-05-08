@@ -32,11 +32,11 @@ class Login extends React.Component{
         return(
             <div className='login'>
                 <div className="loginBox">
-                    <div className="login-header">登录您的账号，发现知识的美</div>
+                    <div className="login-header">登录您的账号，遇见更好的自己</div>
                     <div className="login-container">
                         <div className="login-acconut">
                             <div className="login-input">
-                                <input type="text" placeholder="手机号或邮箱"
+                                <input type="text" placeholder="请输入用户名"
                                     onChange={(e)=>{this.setState({username:e.target.value})}}
                                     onKeyDown={this.handleEnterKey}
                                  />

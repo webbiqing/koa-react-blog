@@ -53,6 +53,7 @@
     "antd": "^3.4.0",
     "axios": "^0.18.0",
     "draftjs-to-html": "^0.8.3",
+    "draftjs-to-markdown": "^0.5.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-draft-wysiwyg": "^1.12.11",

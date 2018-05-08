@@ -9,7 +9,7 @@ const CONF = {
         port: 3306,
         user: 'root',
         database: 'firstKoa',
-        password: 'biqing123',
+        password: '110189',
         char: 'utf8mb4'
     }
 }

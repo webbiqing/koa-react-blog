@@ -20,7 +20,8 @@ class App extends Component{
         let header =  <Header className='layout-header' style={{ width: '100%'}} >
                         <div className="logo" />
                         <div className='loginMainBox'>
-                            <Link to='/login'>登录</Link>
+                            <Link to='/login'>登录</Link>/
+                            <Link to='/login'>注册</Link>
                         </div>
                         <Menu
                             theme="light"
@@ -51,6 +52,7 @@ class App extends Component{
                 <div style={{ padding: 10, minHeight: 380 }}> 
                     {this.props.children}
                 </div>
+                
             </Content>
         </Layout>
       )

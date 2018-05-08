@@ -36,8 +36,37 @@ class Home extends React.Component{
                         )
                     })
                 }
+
                </div>
-               <div className="home-right"></div>
+               <div className="home-right">
+                  <div className="icon">
+                    <div className="right-icon">
+                      <i className="icon1"></i>
+                      <a href="">知乎</a>
+                    </div>
+                    <div className="right-icon">
+                      <i className="icon2"></i>
+                      <a href="">Github</a>
+                    </div>
+                    <div className="right-icon">
+                      <i className="icon3">E</i>
+                      <a href="">E-mail</a>
+                    </div>
+                  </div>
+                  <div className="icon">
+                    <div className="right-icon">
+                      <i className="icon4"></i>
+                      <a href="">微博</a>
+                    </div>
+                    <div className="right-icon">
+                      <i className="icon5"></i>
+                      <a href="">Medium</a>
+                    </div>
+                  </div>
+               </div>
+               <div className="home-fixed">
+
+               </div>
            </div>
         )
     }
