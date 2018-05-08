@@ -37,7 +37,7 @@ class App extends Component{
                                 <Menu.Item key="setting:4"><Link to="/addblog">新增博客</Link></Menu.Item>
                             </SubMenu>
                             <Menu.Item key="3">
-                                我的个人信息
+                              <Link to="/Information">我的个人信息</Link>
                             </Menu.Item>
                         </Menu>
                     </Header>
@@ -46,7 +46,7 @@ class App extends Component{
             {
                  this.props.location.pathname != '/login' ? header : ''
             }
-            <Content style={{ width: 1000, margin:'10px auto 0 auto' }}>
+            <Content style={{ width: 1000, margin:'50px auto 0 auto' }}>
                 <div style={{ padding: 10, minHeight: 380 }}> 
                     {this.props.children}
                 </div>

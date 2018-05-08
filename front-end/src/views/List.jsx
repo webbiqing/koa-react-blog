@@ -24,15 +24,21 @@ class List extends React.Component{
                     this.state.blogList.map(item =>{
                         return(
                             <li key={item.id}>
-                                <div> {item.title}</div>
-                                <div className='blogList-name'>发布人 ：{item.name}</div>
+                                <div>{item.title}</div>
+                                <div className='blogList-name'>
+                                    <a href="">修改</a>
+                                    <a href="">删除</a>
+                                    发布人 ：{item.name}
+                                    &nbsp;&nbsp;&nbsp;
+                                    发布时间 ：{item.name}
+                                    </div>
                             </li>
                         )
                     })
                 }
                 </ul>
             </div>
-            
+
         )
     }
 }

@@ -8,6 +8,7 @@ import List from '../views/List'
 import Details from '../views/Details'
 import Home from '../views/Home'
 import Login from '../views/login'
+import Information from '../views/Information'
 
 const history = createBrowserHistory();
 
@@ -21,6 +22,7 @@ const router = (
                     <Route path="/addblog" component={Addblog} />
                     <Route path="/list" component={List} />
                     <Route path="/details/:blogId" component={Details} />
+                    <Route path="/information" exact component={Information} />
                 </App>
                 <Redirect to="/" />                
             </Switch>
