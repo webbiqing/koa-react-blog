@@ -18,16 +18,14 @@ class List extends React.Component{
     render(){
         return (
             <div className='blog-list-main'>
-                <div className='blog-title blogList-title'>博客管理系统博客列表</div>
+                <div className='blog-title blogList-title'>我的博客</div>
                 <ul className = 'blogList'>
                 {
                     this.state.blogList.map(item =>{
                         return(
                             <li key={item.id}>
-                                <Link to={`/details/${item.id}`} >
-                                    <div> {item.title}</div>
-                                    <div className='blogList-name'>发布人 ：{item.name}</div>
-                                </Link>
+                                <div> {item.title}</div>
+                                <div className='blogList-name'>发布人 ：{item.name}</div>
                             </li>
                         )
                     })

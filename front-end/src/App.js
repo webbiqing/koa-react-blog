@@ -34,9 +34,7 @@ class App extends Component{
                             </Menu.Item>
                             <SubMenu title={<span>博客管理</span>}>
                                 <Menu.Item key="setting:1"><Link to="/list">我的博客</Link></Menu.Item>
-                                <Menu.Item key="setting:2">博客修改</Menu.Item>
-                                <Menu.Item key="setting:3">博客删除</Menu.Item>
-                                <Menu.Item key="setting:4"><Link to="/addblog">博客新增</Link></Menu.Item>
+                                <Menu.Item key="setting:4"><Link to="/addblog">新增博客</Link></Menu.Item>
                             </SubMenu>
                             <Menu.Item key="3">
                                 我的个人信息

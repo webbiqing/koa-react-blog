@@ -10,6 +10,6 @@ router.get('/login',controllers.login)
 router.post('/add-blog',controllers.addBlog)
 router.get('/search-blog',controllers.searchBlog)
 router.get('/query-blog',controllers.searchMainBlog)
-router.get('/del-blog',controllers.deleteBlog)
+router.delete('/del-blog',controllers.deleteBlog)
 
 module.exports = router
