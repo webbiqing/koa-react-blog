@@ -26,6 +26,9 @@ class Information extends React.Component{
         <div className="info-left">
           <div className="info1">
             关于我
+            <a>
+              <Link to="/login">退出登录</Link>
+            </a>
           </div>
           <div className="info2">
             <div className="info2-Pho">
@@ -34,16 +37,16 @@ class Information extends React.Component{
             <div className="info2-Inner">
               <p>关于博主</p>
               <div>
-                个人资料:
+                个人资料: 女,九零后,程序猿一枚
               </div>
               <div>
-                爱好:
+                爱好: 无
               </div>
               <div>
-                个人简介:
+                个人简介: 无
               </div>
               <div>
-                联系方式:
+                联系方式: 邮箱:webzfeng@163.com/QQ:1192714680
               </div>
             </div>
           </div>
@@ -54,10 +57,10 @@ class Information extends React.Component{
             <div className="info2-Inner">
               <p>关于博客</p>
               <div>
-                创建时间:
+                创建时间: 2018-01-01
               </div>
               <div>
-                访问量:
+                访问量: 99+
               </div>
             </div>
           </div>
