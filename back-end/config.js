@@ -10,7 +10,8 @@ const CONF = {
         user: 'root',
         database: 'firstKoa',
         password: 'biqing123',
-        char: 'utf8mb4'
+        char: 'utf8mb4',
+        timezone:"08:00"
     }
 }
 

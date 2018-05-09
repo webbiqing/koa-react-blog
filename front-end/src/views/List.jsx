@@ -1,19 +1,52 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Link } from 'react-router-dom';
-import {getData,postData} from "../http/index"
+import {getData,postData,deleteData} from "../http/index"
+import { Modal, Button,message } from 'antd';
 
 class List extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            blogList:[{id:11,title:'这是一个标题',name:'测试'}]
+            blogList:[],
+            btnloading:false            
         } 
     }
-    componentWillMount(){
+    getData(){
         getData('/weapp/search-blog').then(res =>{
             this.setState({blogList:res.data})
         })
+    }
+    componentWillMount(){
+        this.getData();
+    }
+    
+    showModal(id){
+        let _this = this;
+        Modal.confirm({
+            title: '删除博客',
+            content: '您确认要删除这条博客？',
+            onOk() {
+                _this.setState({btnloading:true});
+                setTimeout(()=>{
+                    deleteData('/weapp/del-blog',{id:id}).then(res =>{
+                        _this.setState({btnloading:false}); 
+                        _this.getData();  
+                        if(res.status == 200){
+                            message.success('删除成功！');
+                        }                                     
+                        return true;
+                    }).catch(res=>{
+                        return true;
+                    })
+                },1000)
+            },
+            okText: '确认',
+            cancelText: '取消',
+          });
+    }
+    test(a){
+        console.log(a);
     }
     render(){
         return (
@@ -26,19 +59,20 @@ class List extends React.Component{
                             <li key={item.id}>
                                 <div>{item.title}</div>
                                 <div className='blogList-name'>
-                                    <a href="">修改</a>
-                                    <a href="">删除</a>
-                                    发布人 ：{item.name}
-                                    &nbsp;&nbsp;&nbsp;
-                                    发布时间 ：{item.name}
+                                    <div className='blogList-btn'>
+                                        <Button  type="primary"><Link to={`/edit/${item.id}`}>编辑</Link></Button>
+                                        <Button  type="primary" loading={this.state.btnloading} onClick={this.showModal.bind(this,item.id)}>删除</Button>
                                     </div>
+                                   <div>
+                                       <span> 发布时间 ：{item.name}</span>
+                                   </div>
+                                </div>
                             </li>
                         )
                     })
                 }
                 </ul>
             </div>
-
         )
     }
 }

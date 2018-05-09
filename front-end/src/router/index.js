@@ -6,6 +6,7 @@ import App from '../App';
 import Addblog from '../views/Addblog'
 import List from '../views/List'
 import Details from '../views/Details'
+import Edit from '../views/editBlog'
 import Home from '../views/Home'
 import Login from '../views/login'
 import Information from '../views/Information'
@@ -25,6 +26,7 @@ const router = (
                     <Route path="/addblog" component={Addblog} />
                     <Route path="/list" component={List} />
                     <Route path="/details/:blogId" component={Details} />
+                    <Route path="/edit/:blogId" component={Edit} />
                     <Route path="/information" exact component={Information} />
                     <Route path="/message" exact component={Message} />
                     <Route path="/test" exact component={Test} />

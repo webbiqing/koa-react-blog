@@ -30,7 +30,7 @@ export function postData(url, params) {
 export function deleteData(url, params) {
     let _url = _BASE_URL + url
     return new Promise((resolve, reject) => {
-        axios.delete(_url, params).then(function (response) {
+        axios.post(_url, params).then(function (response) {
             resolve(response)
         }).catch(function (err) {
             reject(err)
