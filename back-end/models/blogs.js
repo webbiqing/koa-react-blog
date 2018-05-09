@@ -2,8 +2,11 @@ const sqlClient = require("../tools/index")
 const escape = require('../tools/escape')
 
 const blogs  = {
-    async addBlogs(title,name,content){
-        return await sqlClient.query(escape`INSERT INTO bloglist SET title = ${title},name=${name},content=${content}`)
+    async addBlogs(title,name,content,category){
+        const date = new Date();
+        return await sqlClient.query(
+            escape`INSERT INTO bloglist (title,name,content,category,date) VALUES (${title},${name},${content},${category},CURDATE())`
+        )
     },
     async searchBlogs(){
         return await sqlClient.query(`select * from bloglist`)

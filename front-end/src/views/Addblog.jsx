@@ -2,9 +2,10 @@ import React from 'react'
 import { render } from 'react-dom'
 import {getData,postData} from "../http/index"
 import { Editor } from 'react-draft-wysiwyg';
-import { EditorState, convertToRaw } from 'draft-js';
-import draftToMarkdown from 'draftjs-to-markdown';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { EditorState, convertToRaw,convertFromRaw } from 'draft-js';
+import draftToMarkdown from 'draftjs-to-markdown';
+import draftToHtml from 'draftjs-to-html';
 import { message } from 'antd';
 
 class Addblog extends React.Component{
@@ -21,6 +22,9 @@ class Addblog extends React.Component{
     getName(e){
         this.setState({blogName: e.target.value});
     }
+    getFlag = (e) => {
+        this.setState({blogFlag: e.target.value});
+    }
     onEditorStateChange(editorState){
         this.setState({
           editorState
@@ -30,7 +34,8 @@ class Addblog extends React.Component{
         let params = {
             title:this.state.blogTitle,
             name:this.state.blogName,
-            content:draftToMarkdown(convertToRaw(this.state.editorState.getCurrentContent()))
+            category:this.state.blogFlag,
+            content:draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
         }
         postData('/weapp/add-blog',params).then(res =>{
             if(res.status == 200){
@@ -50,6 +55,10 @@ class Addblog extends React.Component{
                 <div className="blog-row">
                     <label>请输入博客作者：</label>
                     <input type="text" onChange={this.getName.bind(this)}/>
+                </div>
+                <div className='blog-row'>
+                    <label>请输入博客标签：</label>
+                    <input type="text" onChange={this.getFlag.bind(this)}/>
                 </div>
                 <div className="blog-row">
                     <label className='blog-content-label'>请输入博客内容：</label>
