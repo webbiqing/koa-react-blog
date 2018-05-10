@@ -75,15 +75,15 @@ class editBlog extends React.Component{
                 <div className="blog-title">编辑博客</div>
                 <div className="blog-row">
                     <label>请输入博客标题：</label>
-                    <Input placeholder="请输入博客标题" defaultValue={this.state.blogTitle} onChange={this.getTitle.bind(this)}/>
+                    <Input placeholder="请输入博客标题" value={this.state.blogTitle} onChange={this.getTitle.bind(this)}/>
                 </div>
                 <div className="blog-row">
                     <label>请输入博客作者：</label>
-                    <Input placeholder="请输入博客作者" defaultValue={this.state.blogName} onChange={this.getName.bind(this)}/>
+                    <Input placeholder="请输入博客作者" value={this.state.blogName} onChange={this.getName.bind(this)}/>
                 </div>
                 <div className='blog-row'>
                     <label>请输入博客标签：</label>
-                    <Input placeholder="请输入标签" defaultValue={this.state.blogFlag} onChange={this.getFlag.bind(this)}/>
+                    <Input placeholder="请输入标签" value={this.state.blogFlag} onChange={this.getFlag.bind(this)}/>
                 </div>
                 <div className="blog-row">
                     <label className='blog-content-label'>请输入博客内容：</label>
