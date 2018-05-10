@@ -20,7 +20,7 @@ module.exports = async function (ctx, next) {
         debug('Catch Error: %o', e)
 
         // 设置状态码为 200 - 服务端错误
-        ctx.status = 200
+        ctx.status = err.status || 500
 
         // 输出详细的错误信息
         ctx.body = {

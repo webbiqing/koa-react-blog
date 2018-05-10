@@ -82,7 +82,7 @@ class editBlog extends React.Component{
                     <Input placeholder="请输入博客作者" value={this.state.blogName} onChange={this.getName.bind(this)}/>
                 </div>
                 <div className='blog-row'>
-                    <label>请输入博客标签：</label>
+                    <label>请输入博客类别：</label>
                     <Input placeholder="请输入标签" value={this.state.blogFlag} onChange={this.getFlag.bind(this)}/>
                 </div>
                 <div className="blog-row">

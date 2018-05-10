@@ -6,7 +6,8 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { EditorState, convertToRaw,convertFromRaw } from 'draft-js';
 import draftToMarkdown from 'draftjs-to-markdown';
 import draftToHtml from 'draftjs-to-html';
-import { message } from 'antd';
+import { message,Select} from 'antd';
+const Option = Select.Option;
 
 class Addblog extends React.Component{
     constructor(props) {
@@ -14,6 +15,7 @@ class Addblog extends React.Component{
 		this.state ={
             mainData:[],
             editorState:{},
+            category:[]
 		}
     }
     getTitle(e){
@@ -22,14 +24,14 @@ class Addblog extends React.Component{
     getName(e){
         this.setState({blogName: e.target.value});
     }
-    getFlag = (e) => {
-        this.setState({blogFlag: e.target.value});
+    setCategory = (value) => {
+        this.setState({blogFlag:value});
     }
     onEditorStateChange(editorState){
         this.setState({
           editorState
         });
-      };
+    };
     pushBlogData(){
         let params = {
             title:this.state.blogTitle,
@@ -44,10 +46,18 @@ class Addblog extends React.Component{
             }
         })
     }
+    getCategoryData = ()=>{
+        getData('/weapp/search-category').then(res=>{
+            this.setState({category:res.data})
+        })
+    }
+    componentWillMount(){
+        this.getCategoryData();
+    }
     render(){
         return (
             <div className="blog">
-                <div className="blog-title">博文录入</div>
+                <div className="blog-title">添加博文</div>
                 <div className="blog-row">
                     <label>请输入博客标题：</label>
                     <input type="text" onChange={this.getTitle.bind(this)}/>
@@ -57,8 +67,16 @@ class Addblog extends React.Component{
                     <input type="text" onChange={this.getName.bind(this)}/>
                 </div>
                 <div className='blog-row'>
-                    <label>请输入博客标签：</label>
-                    <input type="text" onChange={this.getFlag.bind(this)}/>
+                    <label>请选择博客类别：</label>
+                    <Select defaultValue='请选择' style={{ width: 120 }} onChange={ this.setCategory }>
+                    {
+                        this.state.category.map(item =>{
+                            return(
+                                <Option key={item.id} value={item.id}>{item.name}</Option>
+                            )
+                        })
+                    }
+                    </Select>
                 </div>
                 <div className="blog-row">
                     <label className='blog-content-label'>请输入博客内容：</label>

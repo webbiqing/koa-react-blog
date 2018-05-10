@@ -28,7 +28,8 @@ class Home extends React.Component{
                                         <div className='user-info'>{item.name}</div>
                                         <h2>{item.title}</h2>
                                         <div className='item-footer'>
-                                            <div className="item-footer-date">时间：{item.date}</div>
+                                            <div className="item-footer-date">更新时间：{item.date}</div>
+                                            <div className="item-footer-category">博客类别：{item.category_name}</div>
                                         </div>
                                     </div>
                                 </Link>

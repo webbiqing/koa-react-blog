@@ -35,6 +35,7 @@ class Details extends React.Component{
         return (
             <div className='blogDetail'>
                 <div className='blogDetail-title'>{this.state.blogData.title}</div>
+                <div className='blogDetail-category'>博客类别: {this.state.blogData.category_name}</div>
                 <div className='blogDetail-author'>作者: {this.state.blogData.name}</div>
                 <div className='blogDetail-content'>
                 <Editor
