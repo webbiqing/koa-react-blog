@@ -66,7 +66,6 @@ class App extends Component{
                             <Menu.Item key="104">
                               <Link to="/Information">我的个人信息</Link>
                             </Menu.Item>
-
                         </Menu>
                     </Header>
       return (
@@ -78,7 +77,6 @@ class App extends Component{
                 <div style={{ padding: 10, minHeight: 380 }}> 
                     {this.props.children}
                 </div>
-                
             </Content>
         </Layout>
       )

@@ -20,7 +20,6 @@ class Information extends React.Component{
     return (
       <div className='info'>
         <div className="info-title">
-          小凤的博客
           <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
         </div>
         <div className="info-left">

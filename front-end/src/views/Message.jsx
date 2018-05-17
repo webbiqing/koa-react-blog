@@ -19,9 +19,6 @@ class Message extends React.Component{
   render(){
     return (
       <div className='message'>
-        <div className="message-title">
-          小凤的博客
-        </div>
         <div className="message-left">
           <p>留言</p>
           <div className="message-content">
